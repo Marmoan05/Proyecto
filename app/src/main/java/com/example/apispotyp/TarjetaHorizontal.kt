@@ -44,7 +44,6 @@ fun TarjetaHorizontal(
             .clickable {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(urlPlaylist))
                 intent.setPackage("com.spotify.music") // Intenta abrir en la app de Spotify
-
                 try {
                     context.startActivity(intent) // Si Spotify está instalado, lo abre
                 } catch (e: ActivityNotFoundException) {

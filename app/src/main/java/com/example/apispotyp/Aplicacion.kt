@@ -9,7 +9,6 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-
 @Composable
 fun Aplicacion() {
     var selectedTab by remember { mutableIntStateOf(0) }

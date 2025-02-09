@@ -32,7 +32,6 @@ import coil.compose.rememberAsyncImagePainter
 fun TarjetaArtista(artistName: String, followers: String, imageUrl: String, urlArtist: String) {
     val context = LocalContext.current // Obtener contexto para abrir el navegador
 
-
     Card(
         onClick = {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(urlArtist))

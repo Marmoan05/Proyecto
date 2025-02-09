@@ -52,7 +52,6 @@ fun PantallaInicio(onProfileClick: () -> Unit) {
     var cancionesArtista2 by remember { mutableStateOf<List<Triple<String, String, String>>>(emptyList()) }
     var cancionesArtista3 by remember { mutableStateOf<List<Triple<String, String, String>>>(emptyList()) }
     var isLoading by remember { mutableStateOf(true) }
-
     LaunchedEffect(Unit) {
         token = spotifyAuthManager.getAccessToken()
         if (token.isNullOrEmpty() && context is Activity) {

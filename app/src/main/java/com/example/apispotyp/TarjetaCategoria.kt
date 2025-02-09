@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 
-
 @Composable
 fun TarjetaCategoria(name: String, urlImagen: String, modifier: Modifier = Modifier) {
     Card(

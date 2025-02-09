@@ -38,7 +38,6 @@ fun TarjetaPequeniaPlaylist(playlistName: String, imageUrl: String) {
                 .size(50.dp)
                 .clip(RoundedCornerShape(8.dp))
         )
-
         Spacer(modifier = Modifier.width(8.dp))
 
         Text(

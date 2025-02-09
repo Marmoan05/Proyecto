@@ -131,5 +131,4 @@ fun PantallaPerfil() {
                 }
             }
         }
-    }
-}
+    } }

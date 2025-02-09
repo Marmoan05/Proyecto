@@ -48,8 +48,7 @@ fun SeccionHorizontal(title: String, playlists: List<Triple<String, String, Stri
                 )
             }
         }
-    }
-}
+    } }
 
 
 

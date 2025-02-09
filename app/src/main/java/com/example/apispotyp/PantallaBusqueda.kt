@@ -29,8 +29,6 @@ import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-
-
 @Composable
 fun PantallaBusqueda(onProfileClick: () -> Unit) {
     val context = LocalContext.current

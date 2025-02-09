@@ -41,14 +41,12 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("SpotifyPrefs", MODE_PRIVATE)
         val token = sharedPreferences.getString("ACCESS_TOKEN", null)
         val expirationTime = sharedPreferences.getLong("TOKEN_EXPIRATION", 0)
-
         Log.d("MainActivity", "Token ha expirado? ${isTokenExpired(expirationTime)}")
 
         if (token.isNullOrEmpty() || isTokenExpired(expirationTime)) {
             loginWithSpotify()
         }
     }
-
     /**
      * Verifica si el token ha expirado.
      * @param expirationTime Tiempo de expiración del token en milisegundos.

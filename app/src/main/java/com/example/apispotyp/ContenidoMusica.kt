@@ -28,7 +28,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import kotlinx.coroutines.delay
 import android.util.Log
-
 @Composable
 fun ContenidoMusica() {
     val context = LocalContext.current

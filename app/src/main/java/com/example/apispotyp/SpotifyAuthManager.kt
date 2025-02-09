@@ -24,7 +24,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 class SpotifyAuthManager(private val context: Context) {
-
     companion object {
         private const val CLIENT_ID = "e42d03e83bc64c7485315823a0cac030"
         private const val CLIENT_SECRET = "3dc87a54c457442c8051401e107e9320"
