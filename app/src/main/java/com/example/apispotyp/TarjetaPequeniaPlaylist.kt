@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 
+
 @Composable
 fun TarjetaPequeniaPlaylist(playlistName: String, imageUrl: String) {
     Row(
