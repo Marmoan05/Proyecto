@@ -43,16 +43,15 @@ fun TarjetaHorizontal(
             .padding(vertical = 8.dp)
             .clickable {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(urlPlaylist))
-                intent.setPackage("com.spotify.music") // Intenta abrir en la app de Spotify
+                intent.setPackage("com.spotify.music")
                 try {
-                    context.startActivity(intent) // Si Spotify está instalado, lo abre
+                    context.startActivity(intent)
                 } catch (e: ActivityNotFoundException) {
-                    // Si no está instalado, abre en el navegador
                     context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(urlPlaylist)))
                 }
             },
         shape = RoundedCornerShape(8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1C)) // Color oscuro para la tarjeta
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1C))
     ) {
         Row(
             modifier = Modifier

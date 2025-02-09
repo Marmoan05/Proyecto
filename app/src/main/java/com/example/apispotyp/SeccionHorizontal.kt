@@ -34,7 +34,6 @@ fun SeccionHorizontal(title: String, playlists: List<Triple<String, String, Stri
         )
 
         Spacer(modifier = Modifier.height(8.dp))
-
         LazyRow(
             contentPadding = PaddingValues(horizontal = 16.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp)

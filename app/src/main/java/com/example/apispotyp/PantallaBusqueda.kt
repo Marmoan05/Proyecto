@@ -52,6 +52,7 @@ fun PantallaBusqueda(onProfileClick: () -> Unit) {
         profileImageUrl = userProfile?.images?.firstOrNull()?.url
     }
 
+
     Column(
         modifier = Modifier
             .fillMaxSize()

@@ -68,7 +68,6 @@ fun PantallaInicio(onProfileClick: () -> Unit) {
             userDisplayName = userProfile?.display_name
         }
     }
-
     LaunchedEffect(token, isAuthenticated) {
         if (isAuthenticated && !token.isNullOrEmpty()) {
             delay(500)

@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             loginWithSpotify()
         }
     }
+
     /**
      * Verifica si el token ha expirado.
      * @param expirationTime Tiempo de expiración del token en milisegundos.

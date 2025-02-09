@@ -36,6 +36,7 @@ fun ContenidoMusica() {
     var isLoading by remember { mutableStateOf(true) }
     var token by remember { mutableStateOf<String?>(null) }
 
+
     LaunchedEffect(Unit) {
         isLoading = true
         token = spotifyAuthManager.getAccessToken()

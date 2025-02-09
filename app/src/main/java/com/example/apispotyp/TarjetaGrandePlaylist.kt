@@ -34,6 +34,7 @@ fun TarjetaGrandePlaylist(playlistName: String, imageUrl: String, imageSize: Dp,
             .clickable {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(urlPlaylist))
                 intent.setPackage("com.spotify.music")
+
                 try {
                     context.startActivity(intent)
                 } catch (e: ActivityNotFoundException) {

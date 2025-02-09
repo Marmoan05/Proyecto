@@ -32,6 +32,7 @@ class SpotifyAuthManager(private val context: Context) {
         private const val AUTH_REQUEST_CODE = 1337
     }
 
+
     private val oauthService = ServiceBuilder(CLIENT_ID)
         .apiSecret(CLIENT_SECRET)
         .defaultScope(SCOPE)

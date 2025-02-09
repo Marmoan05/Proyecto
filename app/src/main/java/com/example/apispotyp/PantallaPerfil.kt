@@ -114,7 +114,6 @@ fun PantallaPerfil() {
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
-
                 Text(
                     text = "Artistas más escuchados recientemente",
                     style = TextStyle(color = Color.White, fontSize = 18.sp)

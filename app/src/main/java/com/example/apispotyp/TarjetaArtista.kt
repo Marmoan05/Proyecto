@@ -30,7 +30,7 @@ import coil.compose.rememberAsyncImagePainter
 
 @Composable
 fun TarjetaArtista(artistName: String, followers: String, imageUrl: String, urlArtist: String) {
-    val context = LocalContext.current // Obtener contexto para abrir el navegador
+    val context = LocalContext.current
 
     Card(
         onClick = {
