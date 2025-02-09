@@ -1,3 +1,4 @@
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.Image
@@ -20,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
@@ -33,19 +35,23 @@ fun TarjetaHorizontal(
     imageSize: Dp,
     urlPlaylist: String
 ) {
+    val context = LocalContext.current
     // Contenedor para la tarjeta horizontal
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp)
             .clickable {
-                // Aquí puedes manejar el click, por ejemplo, abrir el enlace del playlist
-                // Puedes usar un Intent para abrir la URL del playlist, por ejemplo:
-                // val intent = Intent(Intent.ACTION_VIEW, Uri.parse(urlPlaylist))
-                // context.startActivity(intent)
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(urlPlaylist))
+                intent.setPackage("com.spotify.music")
+                try {
+                    context.startActivity(intent)
+                } catch (e: ActivityNotFoundException) {
+                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(urlPlaylist)))
+                }
             },
         shape = RoundedCornerShape(8.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1C)) // Color oscuro para la tarjeta
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1C))
     ) {
         Row(
             modifier = Modifier
